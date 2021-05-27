@@ -1,0 +1,117 @@
+body{
+	min-height: 100vh;
+	margin: 0;
+	display:grid;
+	place-items: center;
+	background: url('bg.jpg') center no-repeat ;
+
+
+}
+*,
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+:root{
+	--desired-size: 37;
+	--coefficient:1vmin ;
+	--size: calc(var(--desired-size) * var(--coefficient)) ;
+}
+
+
+
+[role="list"]{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	height: calc(1.5 * var(--size));
+	width: calc(2.5 * var(--size));
+	
+
+}
+li{
+	width: 10%;
+}
+
+button{
+	width: 100%;
+	height: 100%;
+}
+
+
+.xylophone:before,
+.xylophone:after {
+  content: "";
+  position: absolute;
+  z-index: -2; 
+  background: whitesmoke;
+  height: 5%; 
+  width: 83%;
+  right: 12%;
+  left: 5%;
+}
+
+.xylophone:before {
+  top: 30%;
+  transform: rotate(3deg);
+}
+
+.xylophone:after {
+  bottom: 30%;
+  transform: rotate(-3deg);
+}
+
+li:nth-child(1) button {
+  background-color: skyblue;
+}
+li:nth-child(2) button  {
+  background-color: red;
+}
+li:nth-child(3) button {
+  background-color: yellow;
+}
+li:nth-child(4) button {
+  background-color: lightgreen;
+}
+li:nth-child(5) button {
+  background-color: green;
+}
+li:nth-child(6) button{
+  background-color: yellow;
+}
+li:nth-child(7) button{
+  background-color: red;
+}
+li:nth-child(8) button{
+  background-color: skyblue;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+  
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5%;
+  width: 35%;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button::before {
+  top: 5%;
+}
+
+button::after {
+  bottom: 5%;
+}
